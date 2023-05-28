@@ -1,0 +1,8 @@
+// BORDER
+$custom-border-radius: 20px;
+$dark-color: #8d94a8;
+
+:export {
+  custom-border-radius: $custom-border-radius;
+  dark-color: $dark-color
+}

@@ -1,0 +1,48 @@
+@import '../../../assets/sass/index';
+
+* {
+    box-sizing: border-box;
+  }
+
+.body{
+    background-color: white;
+    padding: 2rem;
+    height: 100%;
+}
+
+.background {
+  background: linear-gradient(
+    108.66deg,
+    #d6e2f9 -8%,
+    #e3d4e9 13.12%,
+    #f4f6fa 39.68%,
+    #dfcdef 63.22%,
+    #d6e2f9 80.12%,
+    #ffffff 96.42%
+  );
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  height: 100%;
+  border-radius: $custom-border-radius;
+  padding: 2rem;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}

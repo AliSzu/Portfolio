@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.divider {
+  flex-grow: 1;
+  border-bottom: 1px solid black;
+  margin: 5px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  width: 45%;
+  justify-content: space-between;
+}
