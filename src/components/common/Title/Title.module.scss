@@ -1,0 +1,12 @@
+@import "../../../assets/sass/index";
+
+.img {
+  &-sparkles {
+    width: 9%;
+    height: 9%;
+    @include xxl {
+      width: 6%;
+      height: 6%;
+    }
+  }
+}

@@ -4,16 +4,9 @@
     box-sizing: border-box;
   }
 
-.body{
+.container-card{
     background-color: white;
-    padding: 0.8rem;
     height: 100%;
-    @include sm {
-      padding: 1rem;
-    }
-    @include lg {
-      padding: 2rem;
-    }
 }
 
 .background {
@@ -26,7 +19,7 @@
     #d6e2f9 80.12%,
     #ffffff 96.42%
   );
-  background-size: 400% 400%;
+  background-size: 200% 200%;
   animation: gradient 20s ease infinite;
   height: 100%;
   border-radius: $custom-border-radius;
@@ -45,7 +38,7 @@
   }
 }
 
-.container {
+.wrapper {
     display: flex;
     align-items: center;
     justify-content: center;

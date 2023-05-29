@@ -1,0 +1,34 @@
+@import "../../assets/sass/index";
+
+.container-projects {
+  background: linear-gradient(
+    26.18deg,
+    #d6e2f9 6.13%,
+    #e3d4e9 37.89%,
+    #d6e2f9 73.93%,
+    #f4f6fa 87.71%
+  );
+}
+
+.card {
+  padding: 1rem;
+  background: linear-gradient(
+    135.53deg,
+    rgba(255, 255, 255, 0.8) 1.4%,
+    rgba(255, 255, 255, 0.479167) 67.43%,
+    rgba(255, 255, 255, 0) 117.65%
+  );
+  backdrop-filter: blur(2px);
+  border-radius: $custom-border-radius;
+
+  border: 2px solid white;
+
+  @include lg {
+    padding: 2rem;
+  }
+  @include xxl {
+    padding: 3rem;
+  }
+  
+}
+

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useRef } from "react";
 import classes from "./Container.module.scss";
 import Header from "../Header/Header";
 
@@ -8,10 +8,9 @@ interface IContainer {
 
 const Container: FC<IContainer> = ({children}) => {
   return (
-      <div className={classes.body}>
+      <div className={`container ${classes['container-card']}`}>
         <div className={classes.background}>
-            <Header/>
-            <div className={classes.container}>{children}</div>
+            <div className={classes.wrapper}>{children}</div>
         </div>
       </div>
   );

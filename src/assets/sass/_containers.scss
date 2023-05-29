@@ -1,0 +1,14 @@
+.container {
+  padding: 0.8rem;
+  @include sm {
+    padding: 1rem;
+  }
+  @include lg {
+    padding: 1.5rem;
+  }
+}
+
+.wrapper {
+    max-width: 100rem;
+    margin: 0 auto;
+  }

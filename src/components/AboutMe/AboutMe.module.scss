@@ -1,0 +1,77 @@
+@import "../../assets/sass/index";
+
+.container-aboutMe {
+  background-color: white;
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.title-aboutMe {
+  background: linear-gradient(180deg, #dfcdef 0%, #d6e2f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.card {
+  background: linear-gradient(
+    108.66deg,
+    #d6e2f9 2.26%,
+    #e3d4e9 43.91%,
+    #f4f6fa 96.42%
+  );
+  border-radius: 20px;
+  width: 100%;
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2rem;
+  flex-direction: column;
+  @include lg {
+    padding: 2rem;
+    flex-direction: row;
+  }
+  @include xxl {
+    padding: 3rem;
+  }
+}
+
+.text {
+  width: 65%;
+  &-cat {
+    font-size: 0.8rem;
+  }
+}
+
+.cat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.img {
+  &-sparkles {
+    width: 9%;
+    height: 9%;
+    @include xxl {
+      width: 6%;
+      height: 6%;
+    }
+  }
+  &-cat {
+    height: 15rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
+    @include lg {
+        height: 18rem;
+      }
+  }
+}

@@ -1,16 +1,31 @@
-import React, { FC } from "react";
+import React, { FC, RefObject } from "react";
 import classes from "./Header.module.scss";
 
-const Header: FC<{}> = () => {
+interface IHeader {
+  aboutMeRef?: RefObject<HTMLDivElement>;
+  projectsRef?: RefObject<HTMLDivElement>;
+}
+
+const Header: FC<IHeader> = (props: IHeader) => {
+  
+  const onClickScroll = (event: React.MouseEvent<HTMLElement>,ref: RefObject<HTMLDivElement>) => {
+    event.preventDefault();
+    ref.current!.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className={classes.header}>
       <div className={classes.actions}>
-        HOME <span className={classes.divider} />
-        ABOUT ME <span className={classes.divider} />
-        PROJECTS <span className={classes.divider} />
-        CONTACT
+        <span className={classes.text}>HOME </span>
+        <span className={classes.divider} />
+        <span className={classes.text}  onClick={(event) => onClickScroll(event, props.aboutMeRef!)}>ABOUT ME</span>
+        <span className={classes.divider} />
+        <span className={classes.text}  onClick={(event) => onClickScroll(event, props.projectsRef!)}>PROJECTS </span>
+        <span className={classes.divider} />
+        <span className={classes.text}>CONTACT </span>
       </div>
     </div>
+    // <MenuBurger/>
   );
 };
 

@@ -3,6 +3,9 @@
 .header {
   display: flex;
   justify-content: flex-end;
+  // position: absolute;
+  // top: 3rem;
+  // right: 3rem;
 }
 
 .divider {
@@ -12,16 +15,16 @@
 }
 
 .actions {
-  display: flex;
+  display: none;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
   font-size: 0.5rem;
   align-items: center;
   width: 100%;
   justify-content: space-between;
-  @include sm {
-    width: 80%;
-  }
   @include md {
-    padding: 1rem;
+    display: flex;
     font-size: 0.9rem;
     width: 65%;
   }
@@ -29,7 +32,18 @@
     font-size: 1rem;
     width: 50%;
   }
-  @include xl {
+  @include xxl {
     width: 40%;
+    font-size: 1.5rem;
+    top: 4rem;
+    right: 4rem;
+  }
+}
+
+.text {
+  cursor: pointer;
+  &:hover {
+    color: white;
+    transition: 0.5s left ease-in-out;
   }
 }
