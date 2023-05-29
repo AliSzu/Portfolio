@@ -6,8 +6,14 @@
 
 .body{
     background-color: white;
-    padding: 2rem;
+    padding: 0.8rem;
     height: 100%;
+    @include sm {
+      padding: 1rem;
+    }
+    @include lg {
+      padding: 2rem;
+    }
 }
 
 .background {

@@ -2,7 +2,24 @@
 $custom-border-radius: 20px;
 $dark-color: #8d94a8;
 
+// BREAKPOINTS
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
 :export {
   custom-border-radius: $custom-border-radius;
-  dark-color: $dark-color
+  dark-color: $dark-color;
+  screen-sm-min: $screen-sm-min;
+  screen-md-min: $screen-md-min;
+  screen-lg-min: $screen-lg-min;
+  screen-xl-min: $screen-xl-min;
 }

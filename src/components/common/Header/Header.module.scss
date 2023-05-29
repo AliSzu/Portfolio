@@ -1,3 +1,5 @@
+@import "../../../assets/sass/index";
+
 .header {
   display: flex;
   justify-content: flex-end;
@@ -5,13 +7,29 @@
 
 .divider {
   flex-grow: 1;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $dark-color;
   margin: 5px;
 }
 
 .actions {
   display: flex;
+  font-size: 0.5rem;
   align-items: center;
-  width: 45%;
+  width: 100%;
   justify-content: space-between;
+  @include sm {
+    width: 80%;
+  }
+  @include md {
+    padding: 1rem;
+    font-size: 0.9rem;
+    width: 65%;
+  }
+  @include lg {
+    font-size: 1rem;
+    width: 50%;
+  }
+  @include xl {
+    width: 40%;
+  }
 }
