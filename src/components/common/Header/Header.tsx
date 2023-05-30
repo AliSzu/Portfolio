@@ -2,8 +2,9 @@ import React, { FC, RefObject } from "react";
 import classes from "./Header.module.scss";
 
 interface IHeader {
-  aboutMeRef?: RefObject<HTMLDivElement>;
-  projectsRef?: RefObject<HTMLDivElement>;
+  aboutMeRef: RefObject<HTMLDivElement>;
+  projectsRef: RefObject<HTMLDivElement>;
+  contactRef: RefObject<HTMLDivElement>;
 }
 
 const Header: FC<IHeader> = (props: IHeader) => {
@@ -18,11 +19,11 @@ const Header: FC<IHeader> = (props: IHeader) => {
       <div className={classes.actions}>
         <span className={classes.text}>HOME </span>
         <span className={classes.divider} />
-        <span className={classes.text}  onClick={(event) => onClickScroll(event, props.aboutMeRef!)}>ABOUT ME</span>
+        <span className={classes.text}  onClick={(event) => onClickScroll(event, props.aboutMeRef)}>ABOUT ME</span>
         <span className={classes.divider} />
-        <span className={classes.text}  onClick={(event) => onClickScroll(event, props.projectsRef!)}>PROJECTS </span>
+        <span className={classes.text}  onClick={(event) => onClickScroll(event, props.projectsRef)}>PROJECTS </span>
         <span className={classes.divider} />
-        <span className={classes.text}>CONTACT </span>
+        <span className={classes.text} onClick={(event) => onClickScroll(event, props.contactRef)}>CONTACT </span>
       </div>
     </div>
     // <MenuBurger/>

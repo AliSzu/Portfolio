@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useState } from "react";
 import classes from "./ProjectsList.module.scss";
 import ProjectTile from "../ProjectTile/ProjectTile";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../../firebase";
 import Project from "../../../types/project";
 

@@ -37,12 +37,16 @@
     flex-direction: row;
   }
   @include xxl {
-    padding: 3rem;
+    padding: 2.5rem;
   }
 }
 
 .text {
   width: 65%;
+  line-height: 30px;
+  @include xxl {
+    line-height: 40px;
+  }
   &-cat {
     font-size: 0.8rem;
   }
@@ -70,7 +74,28 @@
     overflow: hidden;
     border: 2px solid white;
     @include lg {
-        height: 18rem;
-      }
+      height: 18rem;
+    }
   }
+}
+
+.aboutme-actions {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 3rem;
+}
+
+.icon-container {
+  background-color: white;
+  &:hover {
+    background-color: rgb(242, 242, 242) !important;
+  }
+}
+
+.icon {
+  width: 5rem;
+  height: 5rem;
 }
