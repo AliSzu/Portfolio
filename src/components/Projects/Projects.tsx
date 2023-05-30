@@ -1,7 +1,7 @@
 import React, { FC, forwardRef } from "react";
 import classes from "./Projects.module.scss";
 import Title from "../common/Title/Title";
-import ProjectsList from "./ProjectsForm/ProjectsList";
+import ProjectsList from "./ProjectsList/ProjectsList";
 
 interface IProjects {
 

@@ -7,7 +7,13 @@ ul {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  padding: 0.3rem;
   list-style: none;
+  @include sm {
+    padding: 1rem;
+  }
   @include md {
     grid-template-columns: 1fr 1fr;
   }
