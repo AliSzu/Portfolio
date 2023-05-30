@@ -6,11 +6,11 @@ interface IContainer {
     children: React.ReactNode
 }
 
-const Container: FC<IContainer> = ({children}) => {
+const Container: FC<IContainer> = (props: IContainer) => {
   return (
       <div className={`container ${classes['container-card']}`}>
         <div className={classes.background}>
-            <div className={classes.wrapper}>{children}</div>
+            <div className={classes.wrapper}>{props.children}</div>
         </div>
       </div>
   );

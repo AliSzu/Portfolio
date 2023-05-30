@@ -2,9 +2,6 @@ import React, { FC } from "react";
 import classes from "./Home.module.scss";
 import Container from "../common/Container/Container";
 import eclipse from "../../assets/images/ec.png";
-import Header from "../common/Header/Header";
-
-
 
 const Home: FC<{}> = () => {
   return (
