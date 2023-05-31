@@ -1,0 +1,21 @@
+@import "../../../assets/sass/index";
+
+.icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  @include sm {
+    width: 3rem;
+    height: 3rem;
+  }
+  @include md {
+    width: 4rem;
+    height: 4rem;
+  }
+  &--container {
+    background-color: white;
+    &:hover {
+      background-color: rgb(242, 242, 242) !important;
+    }
+  }
+}
+

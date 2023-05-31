@@ -1,16 +1,17 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import classes from "./ProjectTile.module.scss";
-import Project from "../../../types/project";
+import ProjectObj from "../../../types/project";
 
 interface IProjectTile {
-  project: Project;
+  project: ProjectObj;
 }
 
 const ProjectTile: FC<IProjectTile> = (props: IProjectTile) => {
+  const [images, setImages] = useState<string[]>(props.project.imgBanner)
   return (
     <div className={classes.card}>
       <div className={classes.content}>
-        <img src={props.project.imgBanner} className={classes.bannerImg} />
+        <img src={images[0]} className={classes.bannerImg} />
         <div className={classes.projectTitle}>{props.project.name}</div>
         <div>{props.project.shortDesc}</div>
       </div>

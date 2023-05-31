@@ -1,14 +1,14 @@
-import React, { FC, forwardRef, useState, useEffect } from "react";
+import React, { forwardRef, useState, useEffect } from "react";
 import classes from "./AboutMe.module.scss";
 import ZumiIcon from "../../assets/images/zumi.png";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, getDoc} from "firebase/firestore";
 import Title from "../common/Title/Title";
 import githubIcon from "../../assets/images/githubicon.png";
-import resumeIcon from "../../assets/images/resumeicon.png";
 import catIcon from "../../assets/images/caticon.png";
-import { Button } from "@mui/material";
+import linkedinIcon from '../../assets/images/linkedinIcon.png'
 import Cat from "../../types/cat";
 import { db } from "../../firebase";
+import Icon from "./Icon/Icon";
 
 interface IAboutMe {}
 
@@ -37,6 +37,11 @@ const AboutMe = forwardRef<HTMLDivElement, IAboutMe>((props: IAboutMe, ref) => {
     }
   }
 
+  const handleLinkClick = (url: string) => {
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+    if (newWindow) newWindow.opener = null
+  }
+
   return (
     <div className={`container ${classes["container-aboutMe"]}`}>
       <div className={"wrapper"} ref={ref}>
@@ -47,16 +52,16 @@ const AboutMe = forwardRef<HTMLDivElement, IAboutMe>((props: IAboutMe, ref) => {
             I'm Alicja a dedicated <b>third-year Computer Science student</b> with a strong focus on becoming a Frontend developer!
             I am also an active member of the <b>programming
             scientific club, BYTE_IT</b> where I continuously challenge myself and enhance my skills. 
-            With a solid foundation in Computer Science, I aim to create engaging and user-friendly web as well as desktop applications.<br/>
+            With a solid foundation in Computer Science, I aim to create engaging and user-friendly web as well as desktop applications. Oh! and I love everything cute!<br/>
           </span>
-          Useful links
           <div className={classes['aboutme-actions']}>
-            <Button sx={{backgroundColor: 'white', padding: '1rem', borderRadius: '20px'}} className={classes['icon-container']}><img src={githubIcon} className={classes.icon}/></Button>
-            <Button sx={{backgroundColor: 'white', padding: '1rem', borderRadius: '20px'}} className={classes['icon-container']} onClick={handleCatClick}><img src={catIcon} className={classes.icon}/></Button>
+            <Icon image={githubIcon} onClick={() => handleLinkClick('https://github.com/AliSzu')}/>
+            <Icon image={linkedinIcon} onClick={ () => handleLinkClick('https://www.linkedin.com/in/alicja-szulecka-579427279/')}/>
+            <Icon image={catIcon} onClick={handleCatClick}/>
           </div>
           </div>
           <div className={classes.cat}>
-            <img src={catImg ? catImg.imgSrc : ZumiIcon} className={classes["img-cat"]} />
+            <img src={catImg ? catImg.imgSrc : ZumiIcon} alt={catImg ? catImg.shortDesc : 'Zumi'} className={classes["img-cat"]} />
             <span className={classes["text-cat"]}>
               That's my little ray of sunshine - Zumi!
             </span>

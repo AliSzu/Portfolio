@@ -16,7 +16,7 @@ function App() {
       <Home />
       <AboutMe ref={aboutMeRef} />
       <Projects ref={projectRef} />
-      {/* <Contact ref={contactRef}/> */}
+      <Contact ref={contactRef}/>
     </>
   );
 }

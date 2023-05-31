@@ -5,15 +5,8 @@ import classes from './ContactTextField.module.scss'
 
 const ContactTextField = (props: TextFieldProps) => {
     const { form: { setFieldValue }, field: { name }, rows, label } = props;
-    // const { rows } = fieldToTextField(props)
-    const onChange = React.useCallback(
-        (event: any) => {
-          const { value } = event.target;
-          setFieldValue(name, value ? value.toUpperCase() : '');
-        },
-        [setFieldValue, name]
-      );
-      const multilineBoolean = Number(rows) > 1 ? true : false
+
+    const multilineBoolean = Number(rows) > 1 ? true : false
     return (
         <div className={classes.test}><TextField
         {...fieldToTextField(props)}
@@ -21,9 +14,6 @@ const ContactTextField = (props: TextFieldProps) => {
         label= {label}
         multiline={multilineBoolean}
         rows={rows}
-        // onChange={(e) => {
-        //   setMessage((prev) => ({ ...prev, [property]: e.target.value }));
-        // }}
         InputProps={{ sx: { borderRadius: "20px" } }}
       />
       </div>
