@@ -1,0 +1,26 @@
+@import "../../../assets/sass/index";
+
+.form-control {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.form-action {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submitBtn {
+  width: 100%;
+  &:hover {
+    background-color: #f8f8f8 !important;
+  }
+  @include md {
+    width: 25%;
+  }
+  @include xxl {
+    width: 15%;
+  }
+}

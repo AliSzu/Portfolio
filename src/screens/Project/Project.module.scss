@@ -10,28 +10,6 @@
     );
   }
 
-  
-.card {
-    padding: 1rem;
-    background: linear-gradient(
-      135.53deg,
-      rgba(255, 255, 255, 0.8) 1.4%,
-      rgba(255, 255, 255, 0.479167) 67.43%,
-      rgba(255, 255, 255, 0) 117.65%
-    );
-    backdrop-filter: blur(2px);
-    border-radius: $custom-border-radius;
-  
-    border: 2px solid white;
-  
-    @include lg {
-      padding: 2rem;
-    }
-    @include xxl {
-      padding: 3rem;
-    }
-    
-  }
 
 .card-content{
     display: flex;

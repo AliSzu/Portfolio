@@ -4,55 +4,43 @@
     background-color: white;
 }
 
-.background {
-    background: linear-gradient(26.18deg, #D6E2F9 6.13%, #E3D4E9 37.89%, #D6E2F9 73.93%, #F4F6FA 87.71%);
-    border-radius: $custom-border-radius;
-    padding: 0.5rem;
-    @include sm {
-        padding: 1rem;
-    }
-    @include md {
-        padding: 2rem;
-    }
+.container-projects {
+  background: linear-gradient(
+    26.18deg,
+    #d6e2f9 6.13%,
+    #e3d4e9 37.89%,
+    #d6e2f9 73.93%,
+    #f4f6fa 87.71%
+  );
+}
+
+.form-wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  @include md {
+    grid-template-columns: 1fr 0.6fr;
+    column-gap: 6rem;
   }
+}
 
-  .contact-wrapper {
-    display: inline-block;
-    width: 100%;
-    @include sm {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
+
+.link-wrapper {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  width: 3rem;
+  padding: 0.5rem;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 0.8rem;
+  @include md {
+    font-size: 1rem;
   }
-
-  .form-control {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 2rem;
-    @include md {
-        width: 80%;
-    }
-
-  }
-
-  .form-action{
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .submitBtn{
-    width: 100%;
-    &:hover {
-        background-color: #f8f8f8 !important;
-    }
-    @include md {
-        width: 25%;
-    }
-    @include xxl {
-        width: 15%;
-    }
-  }
-
+}
