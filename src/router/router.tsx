@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserRouter, createHashRouter } from 'react-router-dom';
+import { createBrowserRouter} from 'react-router-dom';
 import App from '../App';
 import Project from '../screens/Project/Project';
 

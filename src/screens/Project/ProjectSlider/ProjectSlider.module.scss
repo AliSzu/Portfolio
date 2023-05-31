@@ -1,0 +1,17 @@
+@import "../../../assets/sass/index";
+
+@import "../../../assets/sass/index";
+
+.slick__list {
+    width: 100%;
+    margin: auto;
+    padding-top: 1rem;
+  }
+
+  .image {
+    border-radius: $custom-border-radius;
+    width: 100%;
+    @include sm {
+        width: 90%;
+    }
+  }

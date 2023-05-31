@@ -1,35 +1,69 @@
 @import "../../assets/sass/index";
 
 .container-projects {
-    background: linear-gradient(
-      26.18deg,
-      #d6e2f9 6.13%,
-      #e3d4e9 37.89%,
-      #d6e2f9 73.93%,
-      #f4f6fa 87.71%
-    );
-  }
+  background: linear-gradient(
+    26.18deg,
+    #d6e2f9 6.13%,
+    #e3d4e9 37.89%,
+    #d6e2f9 73.93%,
+    #f4f6fa 87.71%
+  );
+  min-height: 100%;
+}
 
-
-.card-content{
-    display: flex;
-    row-gap: 1.4rem;
-    flex-direction: column;
+.card-content {
+  display: flex;
+  row-gap: 1rem;
+  flex-direction: column;
 }
 
 .name {
-    font-size: 1.3rem;
-    @include sm {
-      font-size: 2.3rem;
-    }
-    @include md {
-      font-size: 3.5rem;
-    }
-    @include lg {
-      font-size: 4.5rem;
-    }
+  font-size: 2rem;
+  @include sm {
+    font-size: 2.3rem;
   }
+  @include md {
+    font-size: 3.5rem;
+  }
+  @include lg {
+    font-size: 4.5rem;
+  }
+}
 
-  .image {
-    border-radius: $custom-border-radius;
+.image {
+  border-radius: $custom-border-radius;
+}
+
+.section-title {
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  @include sm {
+    font-size: 1.5rem;
   }
+  @include md {
+    font-size: 2rem;
+  }
+  @include lg {
+    font-size: 2.4rem;
+  }
+}
+
+.section-technology {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.about {
+  line-height: 30px;
+  @include sm {
+    line-height: 35px;
+  }
+}
+
+.arrow-icon {
+    padding-bottom: 1rem;
+}

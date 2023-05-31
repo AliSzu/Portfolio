@@ -5,6 +5,10 @@ import Title from "../../components/common/Title/Title";
 import { doc, getDoc } from "firebase/firestore";
 import ProjectObj from "../../types/project";
 import { db } from "../../firebase";
+import ProjectSlider from "./ProjectSlider/ProjectSlider";
+import Technology from "./Technology/Technology";
+import GlassCard from "../../components/common/GlassCard/GlassCard";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 const Project: FC<{}> = () => {
   const { id } = useParams();
@@ -22,17 +26,22 @@ const Project: FC<{}> = () => {
     fetchData().catch(console.error);
   }, []);
 
+  const technologies = project.technologies && project.technologies.map((item) => <Technology technology={item} key={item}/>)
+
   return (
     <div className={`container ${classes["container-projects"]}`}>
       <div className={"wrapper"}>
-      <Link to={`/`}>Home</Link>
-        <div className={classes.card}>
-          <Title title={project!.name} class={classes.name} />
+      <Link to={`/`}><div className={classes['arrow-icon']}><ArrowBackIosNewIcon sx={{fontSize: '2rem'}}/></div></Link>
+        <GlassCard>
+          <Title title={project.name} class={classes.name} />
           <div className={classes["card-content"]}>
-            {project!.shortDesc}
-            {/* <img src={project!.imgBanner[0]} className={classes.image}/> */}
+            <ProjectSlider images={project!.imgBanner}/>
+            <div className={classes['section-title']}>About</div>
+            <section className={classes.about}>{project.about}</section>
+            <div className={classes['section-title']}>Technologies</div>
+            <div className={classes['section-technology']}>{technologies}</div>
           </div>
-        </div>
+        </GlassCard>
       </div>
     </div>
   );
