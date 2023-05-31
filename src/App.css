@@ -3,3 +3,7 @@
   flex-direction: column;
   height: 100%;
 }
+
+.container-contact {
+  background: linear-gradient(65.41deg, #FFFFFF 2.18%, #D6E2F9 39.86%, #E3D4E9 86.27%);
+}

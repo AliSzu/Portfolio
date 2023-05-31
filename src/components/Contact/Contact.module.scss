@@ -1,28 +1,22 @@
 @import "../../assets/sass/index";
 
 .container-card {
-    background-color: white;
+  background-color: white;
 }
 
-.container-projects {
-  background: linear-gradient(
-    26.18deg,
-    #d6e2f9 6.13%,
-    #e3d4e9 37.89%,
-    #d6e2f9 73.93%,
-    #f4f6fa 87.71%
-  );
+.container-contact {
+  background: linear-gradient(65.41deg, #FFFFFF 2.18%, #D6E2F9 39.86%, #E3D4E9 86.27%);
+  margin-top: 2rem;
 }
 
-.form-wrapper{
+.form-wrapper {
   display: grid;
   grid-template-columns: 1fr;
   @include md {
     grid-template-columns: 1fr 0.6fr;
-    column-gap: 6rem;
+    column-gap: 5rem;
   }
 }
-
 
 .link-wrapper {
   text-align: left;

@@ -10,7 +10,7 @@ interface IContact {}
 
 const Contact = forwardRef<HTMLDivElement, IContact>((props: IContact, ref) => {
   return (
-    <div className={`container ${classes["container-projects"]}`} ref={ref}>
+    <div className={`container ${classes["container-contact"]}`} ref={ref}>
       <div className={"wrapper"}>
         <Title title={"Contacts"} />
         <div
