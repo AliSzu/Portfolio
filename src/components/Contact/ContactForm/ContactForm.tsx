@@ -1,4 +1,4 @@
-import React, { FC, forwardRef } from "react";
+import React, { FC } from "react";
 import classes from "./ContactForm.module.scss";
 import { Button } from "@mui/material";
 import { Formik, Form, Field } from "formik";

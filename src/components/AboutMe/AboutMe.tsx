@@ -1,4 +1,4 @@
-import React, { forwardRef, useState, useEffect } from "react";
+import React, { forwardRef, useState, useEffect} from "react";
 import classes from "./AboutMe.module.scss";
 import ZumiIcon from "../../assets/images/zumi.png";
 import { doc, getDoc} from "firebase/firestore";
@@ -16,6 +16,7 @@ const AboutMe = forwardRef<HTMLDivElement, IAboutMe>((props: IAboutMe, ref) => {
   const [cat, setCat] = useState<Cat[]>();
   const [catImg, setCatImg] = useState<Cat>()
 
+
   useEffect(() => {
     const fetchData = async () => {
       const docRef = doc(db, "portfolio", "cat");
@@ -26,6 +27,7 @@ const AboutMe = forwardRef<HTMLDivElement, IAboutMe>((props: IAboutMe, ref) => {
     };
     fetchData().catch(console.error);
   }, []);
+
 
   const handleCatClick = () => {
     const index = cat?.indexOf(catImg!);
