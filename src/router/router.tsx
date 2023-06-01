@@ -6,7 +6,7 @@ import Project from '../screens/Project/Project';
 
 const router = createBrowserRouter([
   {
-    path: '/*',
+    path: '/',
     element: <App />,
   },
   {

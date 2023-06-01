@@ -12,7 +12,7 @@ interface IContact {}
 const Contact = forwardRef<HTMLDivElement, IContact>((props: IContact, ref) => {
   const [containerRef, isVisible] = useElementOnScreen({
     root: null,
-    rootMargin: "10px",
+    rootMargin: "30px",
     threshold: 0.0,
   });
 
@@ -27,11 +27,11 @@ const Contact = forwardRef<HTMLDivElement, IContact>((props: IContact, ref) => {
             </GlassCard>
             <div className={classes["link-wrapper"]}>
               <div className={classes["contact-link"]}>
-                <img src={emailIcon} className={classes.icon} />
+                <img src={emailIcon} className={classes.icon} alt={emailIcon} />
                 <span>alicjaszulecka0@gmail.com</span>
               </div>
               <div className={classes["contact-link"]}>
-                <img src={linkedinIcon} className={classes.icon} />
+                <img src={linkedinIcon} className={classes.icon} alt={linkedinIcon} />
                 <span>https://www.linkedin.com/in/alicja-szulecka/</span>
               </div>
             </div>

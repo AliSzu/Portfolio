@@ -1,4 +1,4 @@
-import React, { FC, forwardRef } from "react";
+import React, { forwardRef } from "react";
 import classes from "./Projects.module.scss";
 import Title from "../../common/Title/Title";
 import ProjectsList from "../ProjectsList/ProjectsList";
@@ -11,7 +11,7 @@ const Projects = forwardRef<HTMLDivElement, IProjects>(
   (props: IProjects, ref) => {
     const [containerRef, isVisible] = useElementOnScreen({
       root: null,
-      rootMargin: "10px",
+      rootMargin: "30px",
       threshold: 0.0,
     });
     return (
