@@ -3,7 +3,7 @@
 @import "../../../assets/sass/index";
 
 .slick__list {
-    width: 100%;
+    width: 80%;
     margin: auto;
     padding-top: 1rem;
   }
@@ -12,6 +12,9 @@
     border-radius: $custom-border-radius;
     width: 100%;
     @include sm {
+      width: 90%;
+  }
+    @include lg {
         width: 90%;
     }
   }

@@ -12,7 +12,6 @@ const ProjectSlider: FC<IProjectSlider> = (props: IProjectSlider) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
     slidesToScroll: 1,
     focusOnSelect: true,
     centerMode: true,
@@ -20,6 +19,7 @@ const ProjectSlider: FC<IProjectSlider> = (props: IProjectSlider) => {
       {
         breakpoint: 576,
         settings: {
+          arrows: false,
          centerMode: false
         },
       },

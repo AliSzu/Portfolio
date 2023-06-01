@@ -67,3 +67,11 @@
 .arrow-icon {
     padding-bottom: 1rem;
 }
+
+.link {
+  cursor: pointer;
+  width: fit-content;
+  &:hover {
+    color: rgba(44, 44, 44, 0.347);
+  }
+}

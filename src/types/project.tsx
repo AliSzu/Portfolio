@@ -6,4 +6,6 @@ export default interface ProjectObj {
   type: string;
   about: string;
   technologies: string[];
+  github?: string;
+  demo?: string;
 }

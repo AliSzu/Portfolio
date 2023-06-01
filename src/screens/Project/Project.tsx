@@ -26,6 +26,11 @@ const Project: FC<{}> = () => {
     fetchData().catch(console.error);
   }, []);
 
+  const handleLinkClick = (url: string) => {
+    const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+    if (newWindow) newWindow.opener = null;
+  };
+
   const technologies = project.technologies && project.technologies.map((item) => <Technology technology={item} key={item}/>)
 
   return (
@@ -40,6 +45,12 @@ const Project: FC<{}> = () => {
             <section className={classes.about}>{project.about}</section>
             <div className={classes['section-title']}>Technologies</div>
             <div className={classes['section-technology']}>{technologies}</div>
+            {project.github && <>
+              <div className={classes['section-title']}>Website</div>
+              <section className={classes.link} onClick={() => handleLinkClick(project.demo!)}>{project.demo}</section>
+              <div className={classes['section-title']}>Github</div>
+              <section className={classes.link} onClick={() => handleLinkClick(project.github!)}>{project.github}</section>
+            </>}
           </div>
         </GlassCard>
       </div>
