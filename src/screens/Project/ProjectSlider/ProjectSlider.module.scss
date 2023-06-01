@@ -1,20 +1,18 @@
 @import "../../../assets/sass/index";
 
-@import "../../../assets/sass/index";
-
 .slick__list {
-    width: 80%;
-    margin: auto;
-    padding-top: 1rem;
-  }
+  width: 80%;
+  margin: auto;
+  padding-top: 1rem;
+}
 
-  .image {
-    border-radius: $custom-border-radius;
-    width: 100%;
-    @include sm {
-      width: 90%;
+.image {
+  border-radius: $custom-border-radius;
+  width: 100%;
+  @include sm {
+    width: 90%;
   }
-    @include lg {
-        width: 90%;
-    }
+  @include lg {
+    width: 90%;
   }
+}
